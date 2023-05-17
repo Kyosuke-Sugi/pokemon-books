@@ -1,5 +1,9 @@
-<ul>
-    <li *ngFor="let obj of albams">
-        {{ obj.title }}
-    </li>
-</ul>
+<div class="gridBox">
+  <mat-card class="list" *ngFor="let obj of pokemons; let i = index">
+    <img
+      src="/assets/thumbnails/{{ i + 1 | number : '3.0' }}.png"
+      alt="{{ obj.name }}"
+    />
+    <p>{{ obj.name }}</p>
+  </mat-card>
+</div>

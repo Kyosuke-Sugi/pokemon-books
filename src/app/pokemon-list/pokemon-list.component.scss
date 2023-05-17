@@ -1,0 +1,14 @@
+.gridBox {
+  margin: 10px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  .list {
+    text-align: center;
+    padding: 10px;
+    img {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+}

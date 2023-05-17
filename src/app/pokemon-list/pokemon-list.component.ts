@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AlbumModel } from '../models/albam.model';
-import { AlbamsService } from '../albams.service';
+import { PokemonsModel, ResultModel } from '../models/pokemons.model';
+import { PokemonsService } from '../pokemons.service';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -8,19 +8,19 @@ import { AlbamsService } from '../albams.service';
   styleUrls: ['./pokemon-list.component.scss']
 })
 export class PokemonListComponent {
-  albams: AlbumModel[] = [];
+  pokemons: ResultModel[] = []
 
-  constructor(private albamsService: AlbamsService){}
+  constructor(private pokemonsService: PokemonsService){}
 
-  getAlbums(): void {
-    this.albamsService.getAlbums()
-      .subscribe(albams => {
-        this.albams = albams
-        console.log(albams)
+  getPokemons(): void {
+    this.pokemonsService.getPokemons()
+      .subscribe(pokemons => {
+        console.log(pokemons);
+        this.pokemons = pokemons.results;
       })
   }
 
   ngOnInit() {
-    this.getAlbums()
+    this.getPokemons()
   }
 }

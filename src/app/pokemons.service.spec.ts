@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AlbamsService } from './albams.service';
+import { AlbamsService } from './pokemons.service';
 
 describe('AlbamsService', () => {
   let service: AlbamsService;
