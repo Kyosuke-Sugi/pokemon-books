@@ -1,5 +1,4 @@
 .gridBox {
-  margin: 10px;
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -11,4 +10,9 @@
       margin: 0 auto;
     }
   }
+}
+
+:host {
+  display: block;
+  padding: 24px;
 }

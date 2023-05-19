@@ -9,11 +9,13 @@ import { HttpClientModule }    from '@angular/common/http';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
+import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PokemonListComponent
+    PokemonListComponent,
+    PokemonDetailComponent
   ],
   imports: [
     BrowserModule,

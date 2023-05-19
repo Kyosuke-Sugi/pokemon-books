@@ -1,0 +1,23 @@
+<mat-card *ngIf="!pokeInfo; else alternative">
+  <p>Loading ...</p>
+</mat-card>
+
+<ng-template #alternative>
+  <mat-card>
+    <h1>
+      <span>No. {{ pokeInfo?.order }}</span
+      ><br />{{ pokeInfo?.name }}
+    </h1>
+    <div class="pokemon-image">
+      <img
+        src="/assets/images/{{ pokeInfo?.id | number : '3.0' }}.png"
+        alt="{{ pokeInfo?.name }}"
+      />
+    </div>
+    <div>
+      <p>
+        <span *ngFor="let type of types">{{ type }},&nbsp;</span>
+      </p>
+    </div>
+  </mat-card>
+</ng-template>
